@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill in your biodata</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/icons8-application-form-16.png">
+    <script>
+        function myFunction() {
+                var x = document.getElementById("myInput");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        
+    </script>
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-transform: uppercase;">Sign up</h1>
+        <p>Fill in your neccesary biodata in the form below</p>
+        <form name="myForm" action="success.html">
+            <div class="row">
+                <div class="column">
+                    <label for="Fname">Name:</label>
+                    <input type="text" name="fname" id="name" placeholder="Your name here" required>
+                    
+                </div>
+                <div class="column">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Your email here" required>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="Phonenumber">Phone number:</label>
+                    <select name="Phonenumber" id="Number">
+                        <option value="">+231</option>
+                        <option value="">+232</option>
+                        <option value="">+233</option>
+                        <option value="">+234</option>
+                        <option value="">+235</option>
+                    </select>
+                    <input type="number" id="pname" placeholder="7046******" required>
+                </div>
+                <div class="column">
+                   <label for="gender">Gender:</label>
+                   <select name="Gender" id="Gender">
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                   </select>
+                </div>
+            </div>
+            <div class="pwd">
+                <!-- Password field -->
+                Password: <br><input type="password" value="" id="myInput" style="width: 50%;" required minlength="8"> <br><br>
+                
+                <!-- An element to toggle between password visibility -->
+                <input type="checkbox" id="checkbox" onclick="myFunction()"> Show Password
+            </div><br>
+            <input type="submit" value="submit" id="submit">
+        </form>
+    </div>
+</body>
+</html>
